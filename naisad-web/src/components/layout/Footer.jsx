@@ -1,3 +1,4 @@
+import { Phone, Mail, MapPin } from 'lucide-react'
 import { companyInfo, navLinks } from '../../data/company.jsx'
 
 function Footer() {
@@ -5,7 +6,7 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <div className="container footer-inner">
+      <div className="container footer-grid">
         <div className="footer-brand">
           <img
             src="/logo_naisad.png"
@@ -15,17 +16,39 @@ function Footer() {
             loading="lazy"
           />
           <p className="footer-slogan">{companyInfo.slogan}</p>
+          <p className="footer-description">{companyInfo.description}</p>
         </div>
 
-        <nav className="footer-links" aria-label="Enlaces rápidos">
-          <ul>
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <a href={link.href}>{link.label}</a>
-              </li>
-            ))}
+        <div className="footer-col">
+          <h3 className="footer-col-title">Enlaces rápidos</h3>
+          <nav aria-label="Enlaces rápidos">
+            <ul className="footer-links">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href}>{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+
+        <div className="footer-col">
+          <h3 className="footer-col-title">Contacto</h3>
+          <ul className="footer-contact-list">
+            <li>
+              <Phone aria-hidden="true" size={18} />
+              <span>{companyInfo.phone || 'Teléfono próximamente'}</span>
+            </li>
+            <li>
+              <Mail aria-hidden="true" size={18} />
+              <span>{companyInfo.email || 'Correo próximamente'}</span>
+            </li>
+            <li>
+              <MapPin aria-hidden="true" size={18} />
+              <span>{companyInfo.address || 'Dirección próximamente'}</span>
+            </li>
           </ul>
-        </nav>
+        </div>
       </div>
 
       <div className="container footer-bottom">

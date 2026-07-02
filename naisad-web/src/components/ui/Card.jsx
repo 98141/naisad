@@ -1,6 +1,7 @@
 function Card({ title, description, icon, image, children }) {
   return (
-    <div className="card">
+    <div className="card premium-card">
+      {/* Al reemplazar por imágenes reales, usar formato WebP/AVIF para reducir peso */}
       {image && (
         <img
           src={image}

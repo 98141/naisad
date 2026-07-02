@@ -4,6 +4,9 @@ import { companyInfo } from '../data/company.jsx'
 function HeroSection() {
   return (
     <section id="inicio" className="hero" aria-labelledby="hero-title">
+      <div className="decorative-shape decorative-shape-1" aria-hidden="true" />
+      <div className="decorative-shape decorative-shape-2" aria-hidden="true" />
+
       <div className="container hero-inner">
         <div className="hero-content">
           <span className="section-eyebrow">Soluciones para tu hogar</span>
@@ -22,8 +25,9 @@ function HeroSection() {
           </div>
         </div>
 
-        <div className="hero-visual" aria-hidden="true">
-          <img src="/logo_naisad.png" alt="" width="220" height="220" />
+        {/* Logo cargado sin loading="lazy" a propósito: es contenido above-the-fold (LCP) */}
+        <div className="hero-visual">
+          <img src="/logo_naisad.png" alt={companyInfo.name} width="220" height="220" />
         </div>
       </div>
     </section>

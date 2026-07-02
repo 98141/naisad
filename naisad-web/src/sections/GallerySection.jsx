@@ -1,10 +1,13 @@
+import { Image, Video } from 'lucide-react'
 import SectionTitle from '../components/ui/SectionTitle.jsx'
 import { gallery } from '../data/gallery.jsx'
 
 function GalleryItem({ item }) {
   if (!item.src) {
+    const TypeIcon = item.type === 'video' ? Video : Image
     return (
       <div className="placeholder-media" aria-hidden="true">
+        <TypeIcon size={28} className="placeholder-media-icon" />
         <span>{item.title}</span>
       </div>
     )
@@ -22,6 +25,7 @@ function GalleryItem({ item }) {
     )
   }
 
+  // Al reemplazar por imágenes reales, usar formato WebP/AVIF para reducir peso
   return (
     <img
       className="gallery-media"
@@ -47,7 +51,10 @@ function GallerySection() {
 
         <div className="grid gallery-grid">
           {gallery.map((item) => (
-            <figure key={item.id} className="gallery-card">
+            <figure key={item.id} className="gallery-card premium-card">
+              <span className={`gallery-badge gallery-badge-${item.type}`}>
+                {item.type === 'video' ? 'Video' : 'Imagen'}
+              </span>
               <GalleryItem item={item} />
               <figcaption>{item.title}</figcaption>
             </figure>

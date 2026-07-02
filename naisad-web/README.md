@@ -51,6 +51,15 @@ Proyecto listo para desplegarse como sitio estático:
 
 No requiere variables de entorno ni configuración adicional (`vercel.json`), ya que es un sitio de una sola página con navegación por anclas.
 
+## Optimización y rendimiento
+
+- Sitio estático, sin backend ni llamadas a APIs.
+- Secciones secundarias (Productos, Servicios, Valores, Galería, Contacto) cargan con `React.lazy` + `Suspense`, generando chunks separados y reduciendo el bundle inicial. El Hero carga de forma normal para cuidar el LCP.
+- Imágenes con `loading="lazy"`, `width`/`height` y `alt` descriptivo, salvo el logo del Hero/Header que carga de forma eager por ser contenido above-the-fold.
+- Componentes pequeños y organizados por responsabilidad (`components/ui`, `components/layout`, `sections`, `data`).
+- Preparado para desplegar en Vercel sin configuración adicional.
+- Recomendación futura: al incorporar imágenes reales, convertirlas a **WebP/AVIF** para reducir peso y mejorar Core Web Vitals.
+
 ## Notas
 
 - Todos los textos e imágenes son provisionales y deben reemplazarse con contenido real de NAISAD antes de la presentación final.

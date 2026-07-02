@@ -14,7 +14,7 @@ function ValuesSection() {
 
         <div className="grid values-grid">
           {values.map((value) => (
-            <div key={value.id} className="value-card">
+            <div key={value.id} className="value-card premium-card">
               <h3 className="card-title">{value.title}</h3>
               <p className="card-description">{value.description}</p>
             </div>

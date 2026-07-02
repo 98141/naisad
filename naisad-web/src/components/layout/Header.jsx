@@ -1,14 +1,25 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { companyInfo, navLinks } from '../../data/company.jsx'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   const closeMenu = () => setIsMenuOpen(false)
 
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 12)
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <header className="header" aria-label="Encabezado principal">
+    <header
+      className={`header ${isScrolled ? 'scrolled' : ''}`}
+      aria-label="Encabezado principal"
+    >
       <div className="container header-inner">
         <a href="#inicio" className="header-logo" onClick={closeMenu}>
           <img src="/logo_naisad.png" alt={companyInfo.name} width="140" height="40" />
