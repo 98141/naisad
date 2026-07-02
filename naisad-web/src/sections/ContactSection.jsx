@@ -39,11 +39,11 @@ function ContactSection() {
             </li>
             <li>
               <Mail aria-hidden="true" size={20} />
-              <span>{companyInfo.email || 'Correo próximamente'}</span>
+              <span>{companyInfo.email || 'seleccion@naisad.com.co'}</span>
             </li>
             <li>
               <MapPin aria-hidden="true" size={20} />
-              <span>{companyInfo.address || 'Dirección próximamente'}</span>
+              <span>{companyInfo.address || 'direcccion, Centro empresarial Oikos - Tocancipá'}</span>
             </li>
           </ul>
         </div>
