@@ -41,11 +41,11 @@ function Footer() {
             </li>
             <li>
               <Mail aria-hidden="true" size={18} />
-              <span>{companyInfo.email || 'Correo próximamente'}</span>
+              <span>{companyInfo.email || 'seleccion@naisad.com.co'}</span>
             </li>
             <li>
               <MapPin aria-hidden="true" size={18} />
-              <span>{companyInfo.address || 'Dirección próximamente'}</span>
+              <span>{companyInfo.address || 'direcccion, Centro empresarial Oikos - Tocancipá'}</span>
             </li>
           </ul>
         </div>
@@ -55,7 +55,7 @@ function Footer() {
         <p>
           © {year} {companyInfo.name}. Todos los derechos reservados.
         </p>
-        <p className="footer-note">Sitio web desarrollado para presentación corporativa.</p>
+        <p className="footer-note">Diseño y desarrollo. Armando Mora</p>
       </div>
     </footer>
   )

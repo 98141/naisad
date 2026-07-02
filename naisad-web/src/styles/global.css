@@ -161,7 +161,9 @@ textarea:focus-visible {
 }
 
 .footer-brand img {
-  filter: brightness(0) invert(1);
+  background-color: var(--color-white);
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.6rem;
 }
 
 .footer-slogan {

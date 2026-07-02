@@ -10,14 +10,14 @@ export const gallery = [
     id: 'servicio-en-accion',
     title: 'Servicio en acción',
     type: 'image',
-    src: '',
+    src: '/imagenes/proceso.png',
     alt: 'Servicio NAISAD en acción',
   },
   {
     id: 'equipo-de-trabajo',
     title: 'Equipo de trabajo',
     type: 'image',
-    src: '',
+    src: '/imagenes/grupoTrabajo.png',
     alt: 'Equipo de trabajo NAISAD',
   },
   {
@@ -31,7 +31,7 @@ export const gallery = [
     id: 'atencion-al-cliente',
     title: 'Atención al cliente',
     type: 'image',
-    src: '',
+    src: '/imagenes/atencionCliente.jpg',
     alt: 'Atención al cliente NAISAD',
   },
   {
