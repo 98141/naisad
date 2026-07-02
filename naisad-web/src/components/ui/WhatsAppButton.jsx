@@ -10,7 +10,7 @@ function WhatsAppButton() {
     <a
       href={href}
       className="whatsapp-button"
-      aria-label="Contactar por WhatsApp"
+      aria-label="Contactar a NAISAD por WhatsApp"
       target={companyInfo.whatsapp ? '_blank' : undefined}
       rel={companyInfo.whatsapp ? 'noopener noreferrer' : undefined}
     >

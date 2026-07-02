@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 
 const DEFAULTS = {
-  title: 'NAISAD | Cuida tu hogar',
+  title: 'NAISAD | Soluciones para el cuidado del hogar',
   description:
     'NAISAD ofrece productos y servicios pensados para el cuidado, bienestar y mantenimiento del hogar.',
   keywords: 'naisad, cuida tu hogar, productos para el hogar, servicios para el hogar',

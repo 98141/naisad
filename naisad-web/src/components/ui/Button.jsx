@@ -1,4 +1,4 @@
-function Button({ children, href, onClick, variant = 'primary', className = '' }) {
+function Button({ children, href, onClick, variant = 'primary', className = '', type = 'button' }) {
   const classes = `btn btn-${variant} ${className}`.trim()
 
   if (href) {
@@ -10,7 +10,7 @@ function Button({ children, href, onClick, variant = 'primary', className = '' }
   }
 
   return (
-    <button type="button" className={classes} onClick={onClick}>
+    <button type={type} className={classes} onClick={onClick}>
       {children}
     </button>
   )
