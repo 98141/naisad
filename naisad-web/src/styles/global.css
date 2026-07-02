@@ -514,10 +514,10 @@ textarea:focus-visible {
 }
 
 .hero-visual img {
-  width: 45%;
+  width: 90%;
   height: auto;
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
+  border-radius: var(--radius-md);
+  object-fit: cover;
 }
 
 /* About */

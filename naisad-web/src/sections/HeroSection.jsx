@@ -27,7 +27,7 @@ function HeroSection() {
 
         {/* Logo cargado sin loading="lazy" a propósito: es contenido above-the-fold (LCP) */}
         <div className="hero-visual">
-          <img src="/logo_naisad.png" alt={companyInfo.name} width="220" height="220" />
+          <img src="/imagenes/personal.jpeg" alt={companyInfo.name} width="220" height="220" />
         </div>
       </div>
     </section>
