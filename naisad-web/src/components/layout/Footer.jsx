@@ -7,7 +7,13 @@ function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <div className="footer-brand">
-          <img src="/logo_naisad.png" alt={companyInfo.name} width="120" height="34" />
+          <img
+            src="/logo_naisad.png"
+            alt={companyInfo.name}
+            width="120"
+            height="34"
+            loading="lazy"
+          />
           <p className="footer-slogan">{companyInfo.slogan}</p>
         </div>
 

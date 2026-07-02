@@ -341,6 +341,12 @@ h4 {
   grid-template-columns: 1fr;
 }
 
+.grid > *,
+.grid-3 > *,
+.grid-4 > * {
+  min-width: 0;
+}
+
 /* Hero */
 .hero {
   padding-block: var(--space-xl);
@@ -349,8 +355,13 @@ h4 {
 
 .hero-inner {
   display: grid;
+  grid-template-columns: 1fr;
   gap: var(--space-lg);
   align-items: center;
+}
+
+.hero-content {
+  min-width: 0;
 }
 
 .hero-content h1 {
@@ -368,6 +379,7 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm);
+  min-width: 0;
 }
 
 .hero-visual {
@@ -389,8 +401,13 @@ h4 {
 /* About */
 .about-layout {
   display: grid;
+  grid-template-columns: 1fr;
   gap: var(--space-lg);
   align-items: center;
+}
+
+.about-layout > * {
+  min-width: 0;
 }
 
 .about-visual {
@@ -483,7 +500,12 @@ h4 {
 /* Contact */
 .contact-layout {
   display: grid;
+  grid-template-columns: 1fr;
   gap: var(--space-lg);
+}
+
+.contact-layout > * {
+  min-width: 0;
 }
 
 .contact-info-list {

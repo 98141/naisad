@@ -8,7 +8,7 @@ function Header() {
   const closeMenu = () => setIsMenuOpen(false)
 
   return (
-    <header className="header">
+    <header className="header" aria-label="Encabezado principal">
       <div className="container header-inner">
         <a href="#inicio" className="header-logo" onClick={closeMenu}>
           <img src="/logo_naisad.png" alt={companyInfo.name} width="140" height="40" />

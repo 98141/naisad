@@ -1,7 +1,16 @@
 function Card({ title, description, icon, image, children }) {
   return (
     <div className="card">
-      {image && <img src={image} alt={title} loading="lazy" className="card-image" />}
+      {image && (
+        <img
+          src={image}
+          alt={title}
+          loading="lazy"
+          width="400"
+          height="250"
+          className="card-image"
+        />
+      )}
       {icon && !image && <div className="card-icon">{icon}</div>}
       <h3 className="card-title">{title}</h3>
       {description && <p className="card-description">{description}</p>}
