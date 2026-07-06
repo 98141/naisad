@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react'
 import SEO from '../components/seo/SEO.jsx'
 import Layout from '../components/layout/Layout.jsx'
 import SectionLoader from '../components/ui/SectionLoader.jsx'
-import HeroSection from '../sections/HeroSection.jsx'
+import Hero from '../sections/Hero.jsx'
 import AboutSection from '../sections/AboutSection.jsx'
 import CtaSection from '../sections/CtaSection.jsx'
 
@@ -17,7 +17,7 @@ function Home() {
     <>
       <SEO />
       <Layout>
-        <HeroSection />
+        <Hero />
         <AboutSection />
         <Suspense fallback={<SectionLoader />}>
           <ProductsSection />

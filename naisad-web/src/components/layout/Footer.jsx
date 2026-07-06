@@ -1,8 +1,8 @@
-import { Phone, Mail, MapPin } from 'lucide-react'
-import { companyInfo, navLinks } from '../../data/company.jsx'
+import { Phone, Mail, MapPin } from "lucide-react";
+import { companyInfo, navLinks } from "../../data/company.jsx";
 
 function Footer() {
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
 
   return (
     <footer className="footer">
@@ -37,15 +37,18 @@ function Footer() {
           <ul className="footer-contact-list">
             <li>
               <Phone aria-hidden="true" size={18} />
-              <span>{companyInfo.phone || 'Teléfono próximamente'}</span>
+              <span>{companyInfo.phone || "Teléfono próximamente"}</span>
             </li>
             <li>
               <Mail aria-hidden="true" size={18} />
-              <span>{companyInfo.email || 'seleccion@naisad.com.co'}</span>
+              <span>{companyInfo.email || "seleccion@naisad.com.co"}</span>
             </li>
             <li>
               <MapPin aria-hidden="true" size={18} />
-              <span>{companyInfo.address || 'direcccion, Centro empresarial Oikos - Tocancipá'}</span>
+              <span>
+                {companyInfo.address ||
+                  "direcccion, Centro empresarial Oikos - Tocancipá"}
+              </span>
             </li>
           </ul>
         </div>
@@ -55,10 +58,20 @@ function Footer() {
         <p>
           © {year} {companyInfo.name}. Todos los derechos reservados.
         </p>
-        <p className="footer-note">Diseño y desarrollo. Armando Mora</p>
+        <p className="footer-note">
+          Diseño y desarrollo.{" "}
+          <a
+            href="https://armandomora.com.co/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-link"
+          >
+            Armando Mora
+          </a>
+        </p>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
